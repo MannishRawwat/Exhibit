@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Exhibit2</string>
+    <string name="home_string">Home</string>
+    <string name="design_string">Design</string>
+    <string name="profile_string">Profile</string>
+    <string name="fav_string">Favourite</string>
+    <string name="bag_string">Bag</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
