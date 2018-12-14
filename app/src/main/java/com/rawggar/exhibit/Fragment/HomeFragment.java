@@ -11,12 +11,17 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.miguelcatalan.materialsearchview.MaterialSearchView;
 import com.rawggar.exhibit.Adapter.ShirtAdapter;
 import com.rawggar.exhibit.R;
 import com.rawggar.exhibit.model.category;
@@ -45,7 +50,6 @@ public class HomeFragment extends Fragment {
     private ShirtAdapter mShirtAdapter;
 
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -70,6 +74,8 @@ public class HomeFragment extends Fragment {
         shirtRecyclerView.setAdapter(mShirtAdapter);
 
         fetchShirtItems();
+
+
 
         return view;
 

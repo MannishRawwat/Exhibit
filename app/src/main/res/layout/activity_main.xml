@@ -8,12 +8,69 @@
     android:layout_height="match_parent"
     tools:context=".Activity.MainActivity">
 
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fffdd0">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:background="#fffdd0"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="0dp" />
+
+        <com.miguelcatalan.materialsearchview.MaterialSearchView
+            android:id="@+id/material_search_bar"
+            app:searchBackground="@color/cream"
+            android:textColorHint="@color/darkgray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_height="match_parent"
+        android:id="@+id/search_results"
+        android:visibility="gone"
+        android:animateLayoutChanges="true"
+        android:background="@color/white">
+
+        <ListView
+            android:id="@+id/lstview"
+            android:layout_width="match_parent"
+            android:divider="@color/darkgray"
+            android:dividerHeight="1dp"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
     <FrameLayout
         android:id="@+id/frame_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
+    </android.support.v4.widget.NestedScrollView>
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
