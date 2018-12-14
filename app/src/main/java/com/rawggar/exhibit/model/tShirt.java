@@ -1,7 +1,8 @@
 package com.rawggar.exhibit.model;
 //This is just added and should be shown in pull
 
-//This is git version
+
+//This is system version
 public class tShirt {
     String url;
     String title;
